@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
-
 test('Status should be 200 upon deleting a kit', async () => {
 	let existingStatus;
     try {
@@ -13,12 +12,9 @@ test('Status should be 200 upon deleting a kit', async () => {
 	}
 	expect(existingStatus).toBe(200);
 });
-
-
 test('Should receive "OK":true when deleting a kit', async () => {
 	let existingResponseBody;
 	try {
-		
 		const response = await fetch(`${config.API_URL}/api/v1/kits/7`,{
 			    method: 'DELETE'
 		});
@@ -26,7 +22,6 @@ test('Should receive "OK":true when deleting a kit', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-		expect(existingResponseBody).toEqual({ ok: true });
-	
+		expect(existingResponseBody).toEqual({ ok: true });	
 });
 
