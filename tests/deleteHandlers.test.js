@@ -16,7 +16,7 @@ test('Should receive "OK":true when deleting a kit', async () => {
 	let existingResponseBody;
 	try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/7`,{
-			    method: 'DELETE'
+			method: 'DELETE'
 		});
 		existingResponseBody = await response.json();
 	} catch (error) {

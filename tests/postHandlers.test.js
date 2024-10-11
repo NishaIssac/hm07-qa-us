@@ -17,7 +17,7 @@ test('Response status should be 200', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-		   existingStatus = response.status;
+		existingStatus = response.status;
 	} catch (error) {
 		console.error(error);
 	}
@@ -33,7 +33,7 @@ test('The kit has id 3 and the 1st id is "For Picnic"', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-		   existingResponseBody = await response.json();
+		existingResponseBody = await response.json();
 	} catch (error) {
 		console.error(error);
 	}

@@ -48,7 +48,7 @@ test('404:Not Found should be received while Modifying the kit', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-		   existingResponseBody = await response.json();
+		existingResponseBody = await response.json();
 	} catch (error) {
 		console.error(error);
 	}
