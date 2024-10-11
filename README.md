@@ -4,13 +4,13 @@ PROJECT NAME:
 Jest API testing suite for Urban Grocers app
 
 PROJECT DESCRIPTION:
-The Jest API testing suite for Urban Grocers app allows you to fetch the server data by passing the API endpoints through requests GET,POST,PUT and DELETE by creating and executing the tests on the IDE environment Visual Studio Code.The primary objective of the project is that it allows you to check for the actual status codes with the expected ones that are received from the server end.
+The Jest API testing suite for Urban Grocers app allows you to fetch the server data by passing the API endpoints through requests GET,POST,PUT and DELETE by creating and executing the tests on the IDE environment Visual Studio Code.The primary objective of the project is that it allows you to check for the actual status codes and response body with the expected ones that are received from the server end.
 
 TECHNOLOGIES AND TECHNIQUES USED:
 Javascript           : Used to build frontend elements
 Nodejs               : This is a Javascript Run time Environment
 Visual Studio code   : This is a development environment(IDE)used for coding and debugging
-Postman              : Exclusively usedfor API testing
+Postman              : Exclusively used for API testing
 Git and GitHub       : Git is a Version Control System from local machine connecting to the remote repository GitHub for project collaborations.
 NPM                  : Node Package Manager consists of all the libraries for Javascript that is used in buiding the applications
 Commands             : Used commands in order to run the tests in VS code terminal and also to connect to the remote repository on Git Bash.
@@ -33,7 +33,7 @@ HOW TO RUN THE Project:
 
 5. To run the tests :
     *Save the file(Ctrl+S) with the code with 2 tests for an endpoint
-    *On the Terminal(make sure you're on your Project Directory), run `npm jest` command to run all the files with tests(To run a single file: Run `npm jest filename.js`)
+    *On the Terminal(make sure you're on your Project Directory), run `npx jest` command to run all the files with tests(To run a single file: Run `npx jest filename.js`)
 
 How I performed :
 1. POSTMAN
@@ -41,7 +41,7 @@ How I performed :
     *I chose these endpoints GET(/api/v1/couriers), POST(/api/v1/products/kits),PUT(/api/v1/kits/7) and DELETE(/api/v1/kits/7) for these requests.
     *Pasted the Server URL and the endpoints in the Postman
     *Based on the request method have passed parameters/request body 
-    *Checked for the status code in Postman
-2.VS CODE TERMINAL
+    *Checked for the status code and response body in Postman
+2.VS CODE & TERMINAL
     *Wrote the tests using those endpoints 
-    *Debugged the code on the terminal using `npm jest` to get whatever received from the Postman.
+    *Debugged the code on the terminal using `npx jest` to get whatever received from the Postman.

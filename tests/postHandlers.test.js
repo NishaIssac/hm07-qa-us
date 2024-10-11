@@ -7,7 +7,7 @@ const requestBody = {
 			3
 		]
 }
-test('Response status should be 200', async () => {
+test('Should receive response status 200', async () => {
 	let existingStatus;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/kits`, {
@@ -23,7 +23,7 @@ test('Response status should be 200', async () => {
 	}
 		expect(existingStatus).toBe(200);
 });
-test('The kit has id 3 and the 1st id is "For Picnic"', async () => {
+test('Should receive the kit with id 3 and the 1st id "For Picnic" in the response body', async () => {
 	let existingResponseBody;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/kits`, {

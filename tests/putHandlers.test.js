@@ -1,31 +1,12 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
 const requestBody = {
-		"name": "My modified kit",
-		"productsList": [
-			{
-				"id": 1,
-				"quantity": 4
-			},
-			{
-				"id": 5,
-				"quantity": 2
-			},
-			{
-				"id": 3,
-				"quantity": 1
-			},
-			{
-				"id": 4,
-				"quantity": 1
-			}
-		]
-	
+		"price" : 10
 }
-test('Status 404 should be received as the kit is not found', async () => {
+test('Should receive the Status 200 upon modification', async () => {
 	let existingStatus;
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
+		const response = await fetch(`${config.API_URL}/api/v1/products/5`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
@@ -36,12 +17,12 @@ test('Status 404 should be received as the kit is not found', async () => {
 	} catch (error) {
 		console.error(error);		
 	}
-	expect(existingStatus).toBe(404);
+	expect(existingStatus).toBe(200);
 });
-test('404:Not Found should be received while Modifying the kit', async () => {
+test('Should receive "ok":true in the response body upon modifying the product', async () => {
 	let existingResponseBody;
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
+		const response = await fetch(`${config.API_URL}/api/v1/products/5`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
@@ -52,6 +33,6 @@ test('404:Not Found should be received while Modifying the kit', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-	expect(existingResponseBody).toEqual( { code: 404, message: 'Not Found' });
+	expect(existingResponseBody).toEqual({"ok": true});
 });
 
